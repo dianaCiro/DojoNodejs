@@ -3,12 +3,11 @@ var router = express.Router();
 var db= require('./queries');
 
 //asignar a cada ruta los metodos de la bd
-router.get('/api/restaurants',db.getAllRestaurants);
-router.get('/api/restaurants/:name',db.getRestaurantByName);
-router.post('/api/restaurants', db.createRestaurant);
-router.delete('/api/restaurants/:id',db.removeRestaurant);
-router.put('/api/restaurants/:id', db.updateRestaurant);
+router.get('/api/menus',db.getAllMenu);
+router.post('/api/menus', db.createMenu);
+router.delete('/api/menus/:id',db.removeMenu);
+router.put('/api/menus/:id', db.updateMenu);
+router.get('/api/menuPorRestaurante',db.findMenuByRestaurant)
 //exportar modulo par aqu elo pueda leer
 module.exports=router;
 
-	
